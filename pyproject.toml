@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cache-header-audit"
+version = "0.1.0"
+description = "Audit HTTP cache headers from the command line."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Mert Efe Kurt" }
+]
+keywords = ["http", "cache", "headers", "cli", "audit"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Environment :: Console",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Software Development :: Quality Assurance"
+]
+
+[project.scripts]
+cache-header-audit = "cache_header_audit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
