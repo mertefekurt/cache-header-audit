@@ -19,6 +19,7 @@ def fetch_headers(
     timeout: float = 8.0,
     user_agent: str = "cache-header-audit/0.1",
 ) -> HeaderResponse:
+    """Fetch response headers, retrying HEAD requests with GET when unsupported."""
     request = Request(url, method=method.upper(), headers={"User-Agent": user_agent})
 
     try:

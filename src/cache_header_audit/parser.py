@@ -6,6 +6,7 @@ def normalize_headers(headers: dict[str, str]) -> dict[str, str]:
 
 
 def parse_cache_control(value: str | None) -> dict[str, str | bool]:
+    """Parse a Cache-Control header into lowercase directives and values."""
     if not value:
         return {}
 

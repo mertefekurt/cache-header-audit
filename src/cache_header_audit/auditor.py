@@ -36,6 +36,7 @@ class AuditResult:
 
 
 def audit_headers(url: str, status: int, headers: Mapping[str, str]) -> AuditResult:
+    """Score HTTP cache headers and collect the highest-signal policy findings."""
     normalized = normalize_headers(dict(headers))
     cache_control = parse_cache_control(normalized.get("cache-control"))
     findings: list[Finding] = []
