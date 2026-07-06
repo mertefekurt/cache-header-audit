@@ -1,36 +1,32 @@
-# Cache Header Audit
-
 ![Cache Header Audit cover](assets/readme-cover.svg)
 
-![stack](https://img.shields.io/badge/stack-Python-b45309?style=flat-square) ![python](https://img.shields.io/badge/python-3.10-be185d?style=flat-square) ![license](https://img.shields.io/badge/license-MIT-4b5563?style=flat-square) ![tests](https://img.shields.io/badge/tests-pytest-2563eb?style=flat-square)
+# Cache Header Audit
 
-> Audit HTTP cache headers from the command line
+Audit HTTP cache headers from the command line.
 
-## How I use it
+## Working shape
 
-The project stays focused on one job: take a small input, produce a clear result, and avoid adding a heavy service around a problem that fits in a command line.
+The repo is meant to be opened, understood, and run quickly. The command surface is deliberately narrow: `cache-header-audit`.
 
-## Quick start
+## Fresh clone
 
 ```bash
+git clone https://github.com/mertefekurt/cache-header-audit.git
+cd cache-header-audit
+python -m venv .venv
+source .venv/bin/activate
 python -m pip install -e ".[dev]"
+```
+
+## First command
+
+```bash
 cache-header-audit --help
-python -m cache_header_audit --help
 ```
 
-## What is inside
-
-```text
-src/            package source
-tests/          test coverage
-.gitignore      project file
-pyproject.toml  package metadata
-```
-
-## Development
+## Local confidence
 
 ```bash
-python -m pip install -e ".[dev]"
 ruff check .
 pytest
 python -m cache_header_audit --help
