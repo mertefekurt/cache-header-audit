@@ -1,19 +1,12 @@
 # Cache Header Audit
 
-Cache Header Audit focuses on one practical job in delivery. The README below is arranged around the shortest path from clone to result.
-
 ![Cache Header Audit cover](assets/readme-cover.svg)
 
-## Open these first
+Audit HTTP cache headers from the command line.
 
-```text
-src/            package source
-tests/          test coverage
-.gitignore      project file
-pyproject.toml  package metadata
-```
+`Python`
 
-## Try the sample
+## Start here
 
 ```bash
 git clone https://github.com/mertefekurt/cache-header-audit.git
@@ -22,6 +15,17 @@ python -m pip install -e ".[dev]"
 cache-header-audit --help
 ```
 
-## How it runs
+## Project map
 
-![Workflow diagram](assets/readme-diagram.svg)
+```text
+src/            package source
+tests/          test coverage
+.gitignore      project file
+pyproject.toml  package metadata
+```
+
+## Repository
+
+[Open the source on GitHub →](https://github.com/mertefekurt/cache-header-audit)
+
+[MIT License](LICENSE)
